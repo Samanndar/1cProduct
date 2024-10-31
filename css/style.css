@@ -1,0 +1,328 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "Glory", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 139.38%;
+  color: var(--primary);
+  overflow-x: hidden;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+ul, 
+li,
+a,
+ol {
+  list-style: none;
+  text-decoration: none;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+:root {
+  --white: #FFFFFF;
+  --primary: #2C2B35;
+  --white-secondary: #F7F8F8;
+  --green: #43A548;
+  --secondary-gray: #6F7973;
+}
+.container {
+  width: 100%;
+  max-width: 365px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 0 1 auto;
+}
+body.active {
+  overflow-y: hidden;
+}
+/* HEADER -------------------------------------- */
+.header {
+  position: relative;
+  padding: 20px 5px 20px 5px;
+  box-shadow: 0px 4px 24.2px 0px rgba(0, 0, 0, 0.06);
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.header-product {
+  display: flex;
+  align-items: center;
+}
+.header-product__logo-link {
+  margin-right: 10px;
+}
+.header-product__logo img{
+  width: 100%;
+  height: 100%;
+}
+.header-product__heading {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 139.38%;
+}
+.header-burger {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.header-burger__span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary); 
+  border-radius: 15px;
+  transition: all 0.5s ease 0s;
+}
+.header-burger.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.header-burger.active span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.header-burger__span:not(:last-child) {
+  margin-bottom: 5px;
+}
+.header-burger.active .header-burger__span:not(:last-child) {
+  margin-bottom: -2px;
+}
+.header-list {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background-color: var(--white-secondary);
+  padding: 80px 130px;
+  text-align: center;
+  transform: translateX(100%);
+  transition: 0.5s ease 0s;
+  visibility: hidden;
+  /* display: none; */
+}
+.header-list.active {
+  transform: translateX(0);
+  visibility: visible;
+  display: block;
+}
+.header-list__item:not(:last-child) {
+  margin-bottom: 50px;
+}
+.header-list__link {
+  color: var(--primary);
+}
+.header-regis__btn {
+  border-radius: 1000px;
+  background: linear-gradient(148.89deg, rgb(67, 165, 72) -6.608%, rgb(82, 226, 89) 118.125%);
+  padding: 10px 20px;
+  font-weight: 600;
+  color: var(--white-secondary);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+.header-regis__btn:hover {
+  background: linear-gradient(-45deg, rgb(67, 165, 72) -6.608%, rgb(82, 226, 89) 118.125%);
+}
+/* MAIN ------------------------------------------ */
+.main {
+  padding: 0 0 64px 0;
+  background-color: var(--white-secondary);
+}
+/* SECTION-MAIN-HEAD---------- */
+.section-main {
+  padding: 32px 0 32px 0;
+  background-color: var(--white);
+}
+.main-head__container >*:not(:last-child) {
+  margin-bottom: 20px;
+}
+.main-head__heading {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 110%;
+}
+.main-head__text {
+  font-size: 16px;
+}
+.main-head__btn-block {
+  padding-top: 10px;
+}
+.main-head__btn {
+  font-size: 12px;
+  font-weight: 600; 
+  padding: 10px 30px;
+  background-color: var(--green);
+  color: var(--white-secondary);
+  border: none;
+  border-radius: 1000px;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+}
+.main-head__btn:hover {
+  background-color: rgb(68, 137, 3);
+}
+/* SECITON-INFO ----------------------------*/
+.section-info {
+  padding: 32px 0 20px 0;
+}
+.info-product__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-product__container > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+.info-product__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+.info-product__card > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+.info-product__heading-block {
+  display: flex;
+  align-items: center;
+}
+.info-product__icons {
+  margin-right: 10px;
+}
+.info-product__heading {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 139.38%;
+}
+.info-product__text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--secondary-gray);
+}
+.info-product__btn {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+  border-radius: 1000px;
+  padding: 10px 30px;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+}
+.info-product__btn:hover {
+  background-color: var(--green);
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+/* SECTION-GIFT ---------------- */
+.gift-premium__bg {
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(248.20deg, rgb(235, 245, 235) 14.336%, rgb(239, 251, 240) 95.567%);
+  padding: 20px;
+}
+.gift-premium__gift-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.gift-premium__gift {
+  margin-right: 24px;
+}
+.gift-premium__text {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--green);
+}
+.gift-premium__btn {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 30px;
+  border: none;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 1000px;
+  transition: all 0.5s ease 0s;
+  cursor: pointer;
+}
+.gift-premium__btn:hover {
+  background-color: green;
+}
+/*  */
+
+
