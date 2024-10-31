@@ -321,6 +321,59 @@ body.active {
 .gift-premium__btn:hover {
   background-color: green;
 }
-/*  */
+/* SECTION-COMMIT-PRODUCT -------------- */
+.section-commit-product {
+  margin: 64px 0;
+}
+.commit-product__container {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+.commit-product__heading {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+.commit-product__commit-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+.commit-product__commit-block:not(:last-child) {
+  margin-bottom: 20px;
+}
+.commit-product__commit {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3D4641;
+  margin-bottom: 20px;
+}
+.commit-product__card {
+  display: flex;
+  align-items: center;
+
+}
+.commit-product__card:not(:last-child) {
+  margin-bottom: 20px;
+}
+.commit-product__close-icon {
+  margin-right: 26px;
+}
+.commit-product__text {
+  color: #3D4641;
+}
+.commit-product__commit-block-item {
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(248.20deg, rgb(229, 246, 230) 22.922%, rgb(223, 247, 224) 81.282%);
+}
+
+
+
 
 
