@@ -354,6 +354,7 @@ body.active {
   margin-bottom: 20px;
 }
 .commit-product__card {
+  width: 100%;
   display: flex;
   align-items: center;
 
