@@ -373,7 +373,76 @@ body.active {
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
   background: linear-gradient(248.20deg, rgb(229, 246, 230) 22.922%, rgb(223, 247, 224) 81.282%);
 }
+/* SECTION-CLIENT-INFO =============== */
+.client-info__wrapper {
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  background: var(--white);
+  padding: 20px;
 
+}
+
+.client-info__text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.client-info__heading {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 139.38%;
+  margin-bottom: 20px;
+}
+
+.client-info__text {
+  font-size: 16px;
+  line-height: 139.38%;
+}
+.client-info__text span {
+  color: var(--green);
+}
+.client-info__info-block {
+  border-radius: 40px;
+  background: linear-gradient(248.20deg, rgb(235, 245, 235) 17.218%, rgb(239, 251, 240) 90.772%);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.client-info__info-block > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.client-info__info-help {
+  font-size: 14px;
+  line-height: 139.38%;
+}
+.client-info__info-help span {
+  color: var(--green);
+  cursor: pointer;
+}
+
+.client-info__info-number,
+.client-info__info-email {
+  font-size: 14px;
+  line-height: 139.38%;
+  color: var(--secondary-gray);
+  display: flex;
+  flex-direction: column;
+
+}
+.client-info__info-number > *:not(:last-child),
+.client-info__info-email > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+.client-info__info-number span:nth-child(2), 
+.client-info__info-email span:nth-child(2) {
+  color: var(--green);
+  cursor: pointer;
+}
 
 
 
