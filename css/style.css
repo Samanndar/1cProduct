@@ -15,6 +15,7 @@ html {
 }
 body {
   /* 4. Improve text rendering */
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   font-family: "Glory", sans-serif;
   font-optical-sizing: auto;
@@ -23,7 +24,6 @@ body {
   font-style: normal;
   line-height: 139.38%;
   color: var(--primary);
-  overflow-x: hidden;
 }
 
 /* 5. Improve media defaults */
@@ -98,11 +98,13 @@ ol {
   padding-right: 15px;
 }
 .wrapper {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
-main {
-  flex: 0 1 auto;
+.main {
+  flex: 1 1 auto;
 }
 body.active {
   overflow-y: hidden;
@@ -739,10 +741,6 @@ body.active {
   border: none;
 }
 /* SECTION-COMPANY --------------------------------  */
-.section-company {
-  margin-bottom: 64px;
-}
-
 .company__container {
   display: flex;
   flex-direction: column;
@@ -756,10 +754,8 @@ body.active {
   line-height: 139.38%;
 }
 .company__company-brend {
-  width: 100vw;
   display: flex;
   justify-content: space-around;
-  /* overflow: hidden; */
   animation: mymove 30s infinite;
   animation-play-state: running;
 }
@@ -777,4 +773,102 @@ body.active {
 }
 .company__company-img:not(:last-child) {
   margin-right: 32px;
+}
+/* FOOOTER -------------------------------------------------- */
+.footer {
+  position: relative; /* bu siz pastga footerdan joy bo'lmoqda !*/
+  bottom: 0;
+  width: 100%;
+  background-color: #2C2B35;
+  padding-top: 40px;
+  padding-bottom: 23px;
+  font-size: 12px;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--white);
+  max-width: 320px;
+}
+.footer__product {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__product-text {
+  margin-top: 32px;
+}
+.footer__product-span {
+  margin-top: 32px;
+  display: block;
+  color: var(--green);
+}
+.footer__product-client span:nth-child(1),
+.footer__product-client span:nth-child(3) {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 139.38%;
+}
+.footer__product-client span:nth-child(2),
+.footer__product-client span:nth-child(4) {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 139.38%;
+  color: var(--white);
+  margin-bottom: 32px;
+}
+.footer__product-slide .slider-footer__btn {
+  font-size: 12px;
+}
+.footer__info {
+  margin-top: 40px;
+}
+.footer__info-heading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 139.38%;
+}
+.footer__info-list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.footer__info-list li:not(:last-child),
+.footer-product__info li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.footer__info-list li a,
+.footer-product__info li a{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 139.38%;
+  color: var(--white);
+}
+.footer-product__info {
+  margin-top: 32px;
+}
+.footer-product__info-heading {
+  padding-bottom: 32px;
+}
+.footer__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #919999;
+}
+.footer__text-hr {
+  width: 320px;
+  height: 1px;
+  background-color: #494949;
+  margin: 35px 0 20px 0;
+}
+.footer__text-block {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__text-span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #919999;
 }
