@@ -693,12 +693,17 @@ body.active {
 }
 .slider-footer__slides-imgs {
   display: flex;
+  overflow: hidden;
 }
 .slider-footer__slides-bg {
-  width: 100%;
-  height: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  transition: all 0.5s ease 0s;
+}
+.slider-footer__slides-bg img{
+  width: 100%;
+  height: 100%;
+
 }
 .slider-footer__slides-box {
   padding: 20px;
